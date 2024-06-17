@@ -1,0 +1,319 @@
+/* Styles for the periodic table */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+header {
+    width: 100%;
+    color: rgb(19, 3, 75);
+    padding: 5px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Periodic table styles */
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, minmax(60px, 1fr));
+    gap: 2px;
+    padding: 5px;
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+.element {
+    position: relative;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.element:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* Position and style the atomic number in the corner */
+.number {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 12px;
+    color: darkred;
+    font-weight: bold;
+}
+
+.symbol {
+    font-size: 24px;
+    display: block;
+    text-align: center;
+}
+
+.element-name {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #333;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Color families */
+.alkali-metals { background-color: #FFD700; }
+.alkaline-earth-metals { background-color: #FFA500; }
+.transition-metals { background-color: #BDBDBD; }
+.post-transition-metals { background-color: #C0C0C0; }
+.metalloids { background-color: #00CED1; }
+.halogens { background-color: #9ACD32; }
+.noble-gases { background-color: #FF6347; }
+.lanthanoids { background-color: #FF00FF; }
+.actinoids { background-color: #9400D3; }
+
+/* Info link styles */
+.info-link {
+    margin-top: 20px;
+}
+/* Info-link styles */
+.info-link {
+    display: inline-block;
+    margin-top: 2px;
+    padding: 10px 20px;
+    color: rgb(2, 54, 11);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.info-link:hover {
+    color: #45a049;
+    transform: scale(1.05);
+}
+/* Diagram styles */
+.diagram {
+    margin-bottom: 20px;
+}
+
+.diagram img {
+    max-width: 100%;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Footer styles */
+footer {
+    color: rgb(56, 4, 4);
+    text-align: center;
+    padding: 2px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .periodic-table {
+        grid-template-columns: repeat(10, minmax(60px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .periodic-table {
+        grid-template-columns: repeat(5, minmax(60px, 1fr));
+    }
+}
+.lanthanides-table, .actinides-table {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    margin-top: 1px;
+    padding: 5px;
+}
+
+.element {
+    position: relative;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.element:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* Position and style the atomic number in the corner */
+.number {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 12px;
+    color: darkred;
+    font-weight: bold;
+}
+
+.symbol {
+    font-size: 24px;
+    display: block;
+    text-align: center;
+}
+
+.element-name {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #333;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Color families */
+.alkali-metals { background-color: #FFD700; }
+.alkaline-earth-metals { background-color: #FFA500; }
+.transition-metals { background-color: #BDBDBD; }
+.post-transition-metals { background-color: #C0C0C0; }
+.metalloids { background-color: #00CED1; }
+.halogens { background-color: #9ACD32; }
+.noble-gases { background-color: #FF6347; }
+.lanthanides { background-color: #FF00FF; }
+.actinides { background-color: #9400D3; }
+
+/* Info link styles */
+.info-link {
+    margin-top: 20px;
+}
+
+/* Diagram styles */
+.diagram {
+    margin-bottom: 20px;
+}
+
+.diagram img {
+    max-width: 100%;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Footer styles */
+footer {
+    color: rgb(56, 4, 4);
+    text-align: center;
+    padding: 2px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .periodic-table {
+        grid-template-columns: repeat(10, minmax(60px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .periodic-table {
+        grid-template-columns: repeat(5, minmax(60px, 1fr));
+    }
+}
